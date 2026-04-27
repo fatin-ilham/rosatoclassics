@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product details - Rosato Classics">
+  <title>Product | Rosato Classics</title>
+  
+  <!-- Google Fonts -->`n  <link rel="preconnect" href="https://fonts.googleapis.com">`n  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`n  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Product-specific styles -->
+  <style>
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: var(--spacing-md);
+      transition: var(--transition);
+    }
+    
+    .back-link:hover {
+      color: var(--text-primary);
+    }
+    
+    .back-link::before {
+      content: '←';
+      font-size: 1.25rem;
+    }
+    
+    .size-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: var(--spacing-sm);
+    }
+  </style>
+</head>`n<body class="page-transition">
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Rosato Classics" class="logo__image"></a>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+      <div class="container">
+        
+        <a href="collection.html" class="back-link">Back to Collection</a>
+        
+        <div class="product-detail__grid">
+          
+          <!-- Product Image -->
+          <div class="product-detail__image" style="position: relative;">
+            <span class="product-card__badge product-card__badge--low" style="position: absolute; top: 1rem; right: 1rem; z-index: 1;">Limited Stock</span>
+            <!-- REPLACE: Add your main product image here -->
+            <img id="product-image" 
+                 src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800&h=800&fit=crop" 
+                 alt="Milano Low - White/Grey"
+                 loading="lazy">
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-detail__content">
+            <h1 id="product-name" class="product-detail__name">Nero</h1>
+            <p id="product-price" class="product-detail__price">$95</p>
+            
+            <p id="product-desc" class="product-detail__desc">
+              All-black everything. Clean leather upper with minimal branding. The Nero is built 
+              for low-key wear — subtle, sharp, and ready for any rotation.
+            </p>
+
+            <!-- Product Meta -->
+            <div class="product-detail__meta">
+              <div class="product-detail__meta-item">
+                <span class="product-detail__meta-label">Availability</span>
+                <span>Limited Stock</span>
+              </div>
+              <div class="product-detail__meta-item">
+                <span class="product-detail__meta-label">Sizes</span>
+                <span>US 7–13</span>
+              </div>
+              <div class="product-detail__meta-item">
+                <span class="product-detail__meta-label">Material</span>
+                <span>Full-grain leather</span>
+              </div>
+              <div class="product-detail__meta-item">
+                <span class="product-detail__meta-label">Origin</span>
+                <span>Small batch production</span>
+              </div>
+            </div>
+
+            <p class="size-note">* Size availability varies. Contact for specific sizes.</p>
+
+            <!-- Contact CTA -->
+            <div style="margin-top: 2rem;">
+              <a href="contact.html" class="btn btn--full">Contact to Purchase</a>
+              <p class="text-muted" style="font-size: 0.75rem; text-align: center; margin-top: 1rem;">
+                Direct inquiries only. No third parties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section class="section featured">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+          
+          <div>
+            <h4 style="margin-bottom: 0.5rem;">Quality First</h4>
+            <p class="text-secondary" style="font-size: 0.875rem;">
+              Every pair is inspected before it leaves our hands. No exceptions.
+            </p>
+          </div>
+
+          <div>
+            <h4 style="margin-bottom: 0.5rem;">Fair Pricing</h4>
+            <p class="text-secondary" style="font-size: 0.875rem;">
+              We keep prices honest. No markups, no games.
+            </p>
+          </div>
+
+          <div>
+            <h4 style="margin-bottom: 0.5rem;">Personal Service</h4>
+            <p class="text-secondary" style="font-size: 0.875rem;">
+              You deal directly with us. That's how business should be.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <img src="images/logo.png" alt="Rosato Classics" class="logo__image" style="height: 30px;">
+        
+        <ul class="footer-links">
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <p class="footer-note">
+        &copy; <span class="footer-year">2026</span> Rosato Classics. All rights reserved.
+      </p>
+    </div>
+  <div style="text-align: center; margin-top: 1rem;"><a href="private.html" class="private-link">Private Access</a></div>`n  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+  
+  <!-- Product Data & Dynamic Content -->
+  <script>
+    // Product database
+    const products = {
+      1: {
+        name: 'Nero',
+        price: '$95',
+        desc: 'All-black everything. Clean leather upper with minimal branding. The Nero is built for low-key wear — subtle, sharp, and ready for any rotation.',
+        image: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800&h=800&fit=crop',
+        material: 'Full-grain leather',
+        sizes: 'US 7–13'
+      },
+      2: {
+        name: 'Veloce',
+        price: '$110',
+        desc: 'Speed-inspired runner with streamlined silhouette. Breathable mesh and reinforced overlays. Built for movement, designed for the streets.',
+        image: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?w=800&h=800&fit=crop',
+        material: 'Mesh/Synthetic',
+        sizes: 'US 7–12'
+      },
+      3: {
+        name: 'Roma',
+        price: '$85',
+        desc: 'Classic court silhouette with vintage proportions. Clean white leather with subtle tonal accents. Timeless design, modern construction.',
+        image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&h=800&fit=crop',
+        material: 'Leather',
+        sizes: 'US 6–13'
+      },
+      4: {
+        name: 'Bianco',
+        price: '$90',
+        desc: 'Pure white leather low-top. No logos, no noise. The Bianco is the definition of clean — versatile enough for daily wear.',
+        image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&h=800&fit=crop',
+        material: 'Premium leather',
+        sizes: 'US 7–13'
+      },
+      5: {
+        name: 'Strada',
+        price: '$120',
+        desc: 'Street-ready high-top with padded collar. Durable construction meets urban style. Olive and black colorway for understated wear.',
+        image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=800&fit=crop',
+        material: 'Suede/Nylon',
+        sizes: 'US 8–14'
+      }
+    };
+
+    // Load product data based on URL parameter
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
+      
+      if (productId && products[productId]) {
+        const product = products[productId];
+        
+        document.getElementById('product-name').textContent = product.name;
+        document.getElementById('product-price').textContent = product.price;
+        document.getElementById('product-desc').textContent = product.desc;
+        document.getElementById('product-image').src = product.image;
+        document.getElementById('product-image').alt = product.name;
+        
+        // Update meta info
+        const metaItems = document.querySelectorAll('.product-detail__meta-item');
+        if (metaItems[2]) {
+          metaItems[2].querySelector('span:last-child').textContent = product.material;
+        }
+        if (metaItems[1]) {
+          metaItems[1].querySelector('span:last-child').textContent = product.sizes;
+        }
+        
+        // Update page title
+        document.title = `${product.name} | Rosato Classics`;
+      }
+    });
+  </script>
+<div class="particles" aria-hidden="true"><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-spotlight" aria-hidden="true"></div>
+</body>
+</html>

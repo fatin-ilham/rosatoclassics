@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Private Access | Rosato Classics</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-transition">
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Rosato Classics" class="logo__image"></a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collection.html">Collection</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Private Access Section -->
+    <section class="private-access">
+      <div class="private-access__content">
+        <h1 class="private-access__title">Private Access</h1>
+        <p class="private-access__subtitle">
+          For our valued clients. Exclusive pairs. Priority availability.
+          Enter your credentials to continue.
+        </p>
+
+        <div class="private-access__form">
+          <form id="privateAccessForm">
+            <input 
+              type="text" 
+              class="private-access__input" 
+              placeholder="Access Code"
+              id="accessCode"
+              required
+            >
+            <input 
+              type="email" 
+              class="private-access__input" 
+              placeholder="Email Address"
+              id="accessEmail"
+              required
+            >
+            <button type="submit" class="btn btn--full" style="width: 100%; margin-top: 0.5rem;">
+              Request Access
+            </button>
+          </form>
+          
+          <p class="private-access__note">
+            Access by invitation only. If you don't have a code, 
+            <a href="contact.html" style="color: var(--text-secondary);">contact us directly</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <img src="images/logo.png" alt="Rosato Classics" class="logo__image" style="height: 30px;">
+        
+        <ul class="footer-links">
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <p class="footer-note">
+        &copy; <span class="footer-year">2026</span> Rosato Classics. All rights reserved.
+      </p>
+      
+      <div style="text-align: center; margin-top: 1rem;">
+        <a href="private.html" class="private-link">Private Access</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+  
+  <script>
+    // Private Access Form Handler
+    document.getElementById('privateAccessForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const code = document.getElementById('accessCode').value;
+      const email = document.getElementById('accessEmail').value;
+      
+      // Valid access codes (in production, this would be server-side)
+      const validCodes = ['ROSATO2026', 'FAMILY', 'VIP', 'ANTHONY'];
+      
+      if (validCodes.includes(code.toUpperCase())) {
+        // Success - in production, redirect to private collection
+        alert('Access granted. Redirecting to private collection...');
+        // window.location.href = 'private-collection.html';
+      } else {
+        // Invalid code
+        alert('Invalid access code. Please contact Anthony directly at 20405767.');
+      }
+    });
+  </script>
+<div class="particles" aria-hidden="true"><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span><span class="particle"></span></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-spotlight" aria-hidden="true"></div>
+</body>
+</html>
